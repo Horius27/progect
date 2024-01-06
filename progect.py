@@ -53,7 +53,7 @@ class Quiz(QWidget):
                     button.setText(self.answers[self.current_question][self.radio_buttons.index(button)])
             else:
                 if self.score['lose'] == 0:
-                    self.parent.handle_victory()  # Вызываем метод родительского окна при успешном прохождении
+                    self.parent.handle_victory()
                 else:
                     QMessageBox.information(self, 'Результат', f'Вы набрали {self.score["win"]} балла')
                     self.parent.show_main_window()
